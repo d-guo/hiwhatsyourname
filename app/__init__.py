@@ -38,17 +38,17 @@ def create_app():
 
     @app.route('/')
     def index():
-        return "its supposed to be /form u headass"
-
-    @app.route('/form')
-    def form():
         return render_template('userinput.html')
+
+    @app.route('/about')
+    def form():
+        return "made by snacc overflow 2.0"
 
     @app.route('/qr', methods = ['POST'])
     def qr():
         counter = (int) (random() * 10000000)
         print(counter)
-        url = "http://06ef57c3.ngrok.io/page/{}".format(counter)
+        url = "http://hiwhatsyourna.me/page/{}".format(counter)
         qr_img = qrcode.make(url)
 
         text_result = request.form

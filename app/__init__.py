@@ -44,6 +44,6 @@ def create_app():
         file_result = request.files
         file_result = base64.encodestring(file_result['image'].read()).decode('utf-8')
 
-        return render_template('result.html', name = tl[0], age = tl[1], gender = tl[2], facebook = tl[3], instagram = tl[4], snapchat = tl[5], twitter = tl[6], about_me = tl[7], file_data = file_result)
+        return render_template('profile.html', name = tl[0], age = tl[1], gender = tl[2], facebook = tl[3], instagram = tl[4], snapchat = tl[5], twitter = tl[6], about_me = tl[7], file_data = file_result)
 
     return app

@@ -1,14 +1,19 @@
+
 <html>
 <head>
-	<link rel="stylesheet" href="styles1.css">
+	<link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='styles/styles1.css') }}">
 </head>
 <body>
 
 <div class="container">
 	<div class="avatar-flip">
-		<img src="http://media.idownloadblog.com/wp-content/uploads/2012/04/Phil-Schiller-headshot-e1362692403868.jpg" height="150" width="150">
+		<img src="data:image/png;base64, {{ file_data }}" height="200px" width="200px"/>
 	</div>
-	<h2>John Smith</h2>
-	<p>Morbi leo risus, porta ac consectetur ac, vestibulum at eros. Maecenas sed diam eget risus varius blandit sit amet non magna ip sum dolore.</p>
-	<p>Connec dolore ipsum faucibus mollis interdum. Donec ullamcorper nulla non metus auctor fringilla.</p>
+	<h2>{{ name }}</h2>
+	<h5>{{ age }}, {{ gender }}<h5>
+	<p>{{ about_me }}</p>
+	<p>fb: {{ facebook }} instagram: {{ instagram }} snapchat: {{ snapchat }} twitter {{ twitter }}</p>
 </div>
+
+</body>
+</html>

@@ -1,0 +1,20 @@
+
+<meta name="viewport" content="width=device-width, initial-scale=0.8">
+<html>
+<head>
+	<link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='styles/styles1.css') }}">
+</head>
+<body>
+
+<div class="container">
+	<div class="avatar-flip">
+		<img src="data:image/png;base64, {{ file_data }}" height="200px" width="200px"/>
+	</div>
+	<h2>{{ name }}</h2>
+	<h5>{{ age }}, {{ gender }}<h5>
+	<p>{{ about_me }}</p>
+	<p>facebook: {{ facebook }} | instagram: {{ instagram }} | snapchat: {{ snapchat }} | twitter: {{ twitter }}</p>
+</div>
+
+</body>
+</html>

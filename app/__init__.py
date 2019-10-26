@@ -8,11 +8,11 @@ def create_app():
 
     @app.route('/')
     def index():
-        return "nothing"
+        return "its supposed to be /form u headass"
 
     @app.route('/form')
     def form():
-        return render_template('userinputnew.html')
+        return render_template('userinput.html')
 
     @app.route('/result', methods = ['POST'])
     def result():

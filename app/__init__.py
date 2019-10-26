@@ -48,7 +48,7 @@ def create_app():
     def qr():
         counter = (int) (random() * 10000000)
         print(counter)
-        url = "localhost:5000/page/{}".format(counter)
+        url = "http://06ef57c3.ngrok.io/page/{}".format(counter)
         qr_img = qrcode.make(url)
 
         text_result = request.form

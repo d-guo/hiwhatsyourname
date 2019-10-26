@@ -46,7 +46,6 @@ def form():
 @app.route('/qr', methods = ['POST'])
 def qr():
     counter = (int) (random() * 10000000)
-    print(counter)
     url = "http://hiwhatsyourna.me/page/{}".format(counter)
     qr_img = qrcode.make(url)
 

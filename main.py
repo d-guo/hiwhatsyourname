@@ -47,8 +47,7 @@ def form():
 def qr():
     counter = (int) (random() * 10000000)
     print(counter)
-    #url = "http://hiwhatsyourna.me/page/{}".format(counter)
-    url = "http://localhost:8080/page/{}".format(counter)
+    url = "http://hiwhatsyourna.me/page/{}".format(counter)
     qr_img = qrcode.make(url)
 
     text_result = request.form

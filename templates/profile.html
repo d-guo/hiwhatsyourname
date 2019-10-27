@@ -11,9 +11,24 @@
 		<img src="data:image/png;base64, {{ file_data }}" height="200px" width="200px"/>
 	</div>
 	<h2>{{ name }}</h2>
-	<h5>{{ age }}, {{ gender }}<h5>
+	<h5>{{ age }}, {{ gender }}</h5>
 	<p>{{ about_me }}</p>
-	<p><img src="/static/fb_logo.png" height="25px" width="25px"></a> {{ facebook }} <img src="/static/insta_logo.png" height="25px" width="25px"></a> {{ instagram }}  <img src="/static/snap_logo.png" height="25px" width="25px"></a> {{ snapchat }}   <img src="/static/twitter_logo.png" height="25px" width="25px"></a> {{ twitter }}</p>
+
+	{% if facebook != "NA" %}
+		<p><img src="/static/fb_logo.png" height="25px" width="25px"></a> &ensp; {{ facebook }} </p>
+	{% endif %} 
+		
+	{% if instagram != "NA" %}
+		<p><img src="/static/insta_logo.png" height="25px" width="25px"></a> &ensp; {{ instagram }} </p>
+	{% endif %} 
+
+	{% if snapchat != "NA" %}
+		<p><img src="/static/snap_logo.png" height="25px" width="25px"></a> &ensp; {{ snapchat }} </p>
+	{% endif %} 
+	{% if twitter != "NA" %}
+		<p><img src="/static/twitter_logo.png" height="25px" width="25px"></a> &ensp; {{ twitter }} </p>
+	{% endif %}
+
 </div>
 
 </body>
